@@ -18,15 +18,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - id: 23.05
-            arch: x86_64
-            sdk_url_path: https://downloads.openwrt.org/releases/23.05.5/targets/x86/64
-            sdk_name: -sdk-23.05.5-x86-64_
-          - id: 25.12
-            arch: x86_64
-            sdk_url_path: https://downloads.openwrt.org/releases/25.12.2/targets/x86/64
-            sdk_name: -sdk-25.12.2-x86-64_
-
+          - id: 22.03
+            arch: rampips-mt76x8
+            sdk_url_path: https://downloads.openwrt.org/releases/22.03.4/targets/ramips/mt76x8/
+            sdk_name: -sdk-22.03.4-ramips-mt76x8_
     env:
       SDK_URL_PATH: ${{ matrix.sdk_url_path }}
       SDK_NAME: ${{ matrix.sdk_name }}
